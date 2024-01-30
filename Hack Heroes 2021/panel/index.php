@@ -1,0 +1,106 @@
+<?php
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Heroic Features - Start Bootstrap Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        .bg-primary,
+        .btn-primary,
+        .bg-dark {
+            background-color: #052C65 !important;
+            border-color: #052C65 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="../">I-QUIZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Kursy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../fiszki">Fiszki</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../settings.php">Ustawienia</a></li>
+                    <?php if(!isset($_SESSION['log_session'])) echo '<li class="nav-item"><a type="button" class="btn btn-warning" href="../login/">Zaloguj się</a></li>'?>
+                    <?php if(isset($_SESSION['log_session'])) echo '<li class="nav-item"><a type="button" class="btn btn-warning" href="./fiszki/actions/logout.php">Wyloguj sie</a></li>'?>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="py-5">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                <div class="m-4 m-lg-5">
+                    <h1 class="display-5 fw-bold">Fiszki</h1>
+                    <p class="fs-4">Zazwyczaj na jednej stronie zawierały rysunek lub słowo (np. Maroko), a na drugiej odpowiedź (stolica: Rabat). Takie fiszki ułatwiały naukę do sprawdzianu – po przeczytaniu pytania mogłeś zastanowić się chwilę nad odpowiedzią, a następnie
+                        sprawdzić ją na odwrocie. Brzmi znajomo?</p>
+                    <a class="btn btn-primary btn-lg" href="../fiszki">Zacznij naukę już teraz</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="pt-4">
+        <div class="container px-lg-5">
+            <div class="row gx-lg-5">
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div style="width: 40px;" class="bg-primary bg-gradient text-white rounded-3 mb-4 m-auto"><i class="bi bi-cloud-download"></i></div>
+                            <h2 class="fs-4 fw-bold">KURS HISTORII</h2>
+                            <p class="mb-0">W tworzeniu</p>
+                            <a class="btn btn-primary btn-lg" href="/kursy?typ=historia">Zacznij naukę już teraz</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div style="width: 40px;" class="bg-primary bg-gradient text-white rounded-3 mb-4 m-auto"><i class="bi bi-cloud-download"></i></div>
+                            <h2 class="fs-4 fw-bold">KURS FIZYKI</h2>
+                            <p class="mb-0">W tworzeniu</p>
+                            <a class="btn btn-primary btn-lg" href="/kursy?typ=fizyka">Zacznij naukę już teraz</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div style="width: 40px;" class="bg-primary bg-gradient text-white rounded-3 mb-4 m-auto"><i class="bi bi-cloud-download"></i></div>
+                            <h2 class="fs-4 fw-bold">KURS BIOLOGII</h2>
+                            <p class="mb-0">W tworzeniu</p>
+                            <a class="btn btn-primary btn-lg" href="/kursy?typ=biologia">Zacznij naukę już teraz</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div style="width: 40px;" class="bg-primary bg-gradient text-white rounded-3 mb-4 m-auto"><i class="bi bi-cloud-download"></i></div>
+                            <h2 class="fs-4 fw-bold">FISZKI</h2>
+                            <p class="mb-0">W tworzeniu</p>
+                            <a class="btn btn-primary btn-lg" href="/fiszki">Zacznij naukę już teraz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">&copy; CodeTeam2TP 2021</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

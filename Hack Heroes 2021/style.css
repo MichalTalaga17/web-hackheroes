@@ -1,0 +1,343 @@
+/* Style globalne */
+body {
+    background-color: #EFEFEF;
+    margin: 0;
+    padding: 0%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img,
+#tytuł,
+#about,
+#historia,
+#fizyka,
+#biologia,
+#kontakt {
+    position: relative;
+    width: 100%;
+}
+img{
+    z-index: -1;
+}
+
+a:hover,
+a {
+    text-decoration: none;
+}
+
+a {
+    color: white;
+}
+
+button {
+    background-color: #052C65;
+    border: none;
+    border-radius: 0%;
+    position: absolute;
+    width: 15%;
+    height: 10%;
+    font-size: 2vw;
+    z-index: 0;
+}
+
+button:hover {
+    background-color: #264f8b;
+}
+
+div {
+    padding-bottom: 2%;
+}
+
+.span_kontakt {
+    color: #052C65;
+    font-family: 'BarlowBold';
+}
+
+
+/* Style czcionki */
+.tekst_tytuł,
+.tekst_about,
+.tekst_kursy,
+.tekst_kontakt,
+span {
+    position: absolute;
+    z-index: 0;
+}
+
+p,
+h2,
+.btn_kursy {
+    font-family: 'BarlowLight';
+}
+
+h3,
+button,
+h1 {
+    font-family: 'BarlowBold';
+}
+
+.header__nav a {
+    color: #EFEFEF;
+    font-family: 'BarlowBold';
+    font-size: 3vw;
+}
+
+
+/*Style nawigacja*/
+header {
+    width: 100%;
+    height: 71px;
+    background-color: #052C65;
+    z-index: 2;
+}
+
+.header__nav a {
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em;
+}
+footer{
+    width: 100%;
+    height: 30px;
+    background-color: #052C65;
+    text-align: center;
+    color: #EFEFEF;
+    font-family: 'BarlowBold';
+    padding-top: 8px;
+}
+
+
+/* Style dla większych ekranów */
+@media only screen and (min-width: 1024px) {
+    .photo_small {
+        display: none;
+    }
+
+
+    /*Style nawigacja*/
+    .header__nav {
+        text-align: right;
+        padding-top: 1em;
+        font-size: 1.1em;
+    }
+
+    .header__nav a:hover {
+        text-decoration: underline;
+    }
+
+    .header__ikona {
+        display: none;
+    }
+
+
+    /*Style czcionki*/
+    h3 {
+        font-size: 2vw;
+        color: #052C65;
+    }
+
+    .tekst_about>h3 {
+        font-size: 3vw;
+    }
+
+    .tekst_kontakt>p {
+        font-size: 1.5vw;
+    }
+
+    h2 {
+        font-size: 2.2vw;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    p {
+        font-size: 1.2vw;
+    }
+
+
+    /*Położenie przycisków*/
+    .btn_kursy {
+        left: 75%;
+    }
+
+    .btn_historia {
+        top: 16%;
+    }
+
+    .btn_fizyka {
+        top: 20%;
+    }
+
+    .btn_biologia {
+        top: 13%;
+    }
+
+    .btn_title {
+        top: 70%;
+        left: 62%;
+    }
+
+
+    /*Położenie tekstów*/
+    .tekst_tytuł {
+        top: 35%;
+        left: 50%;
+        text-align: center;
+    }
+
+    .tekst_about {
+        top: 20%;
+        left: 60%;
+        float: right;
+    }
+
+    .tekst_kursy {
+        top: 10%;
+        left: 15%;
+    }
+
+    .tekst_kontakt {
+        top: 15%;
+        left: 60%;
+    }
+
+    .autor {
+        left: 50%;
+    }
+
+    .kurs_historii_tekst,
+    .kurs_biologi_tekst {
+        top: 5%;
+    }
+
+
+
+}
+
+/*style dla telefonów*/
+@media only screen and (max-width: 1024px) {
+    .photo_bigger {
+        display: none;
+    }
+
+
+    /*style dla nawigacji*/
+    .header__nav {
+        display: none;
+        text-align: right;
+        background-color: #052C65;
+        text-align: left;
+
+    }
+
+    .header__nav a {
+        display: block;
+    }
+
+    .header__nav a:hover {
+        text-decoration: underline;
+    }
+
+    .fa-bars {
+        color: white;
+        padding-right: 1em;
+        padding-top: 22px;
+        float: right;
+    }
+
+    .header__ikona {
+        display: block;
+    }
+
+    .header__ikona:hover + nav {
+        display: block;
+        position: relative;
+    }
+
+    .header__nav:hover {
+        display: block;
+        position: relative;
+    }
+
+
+    /*Style czcionek*/
+    h3 {
+        font-size: 3vw;
+        color: #052C65;
+    }
+
+    .tekst_about>h3 {
+        font-size: 4vw;
+    }
+
+    .tekst_kontakt>p {
+        font-size: 2.5vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+
+
+    /*Położenie przycisków*/
+    .btn_kursy {
+        left: 65%;
+        top: 65%;
+        font-size: 2.5vw;
+    }
+
+    .btn_title {
+        top: 80%;
+        left: 55%;
+        width: 20%;
+        height: 7%;
+        font-size: 2.8vw;
+    }
+
+
+    /*Położenie tekstów*/
+    .tekst_tytuł {
+        top: 60%;
+        left: 38%;
+        text-align: center;
+    }
+
+    .tekst_about {
+        top: 55%;
+        text-align: center;
+        padding: 10%;
+    }
+
+    .tekst_kursy {
+        top: 6%;
+        left: 25%;
+    }
+
+    .tekst_kontakt {
+        top: 25%;
+        left: 5%;
+    }
+
+    .autor {
+        left: 50%;
+    }
+
+    .kurs_historii_tekst,
+    .kurs_biologi_tekst {
+        top: 10%;
+    }
+}
